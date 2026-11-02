@@ -23,21 +23,20 @@ Demo `noindex` ile yayınlanır, üstünde "tasarım önerisi" şeridi vardır.
 - **2026-11-02, iskelet + Faz 2:** Site yazıldı: 26 sayfa (`src/` + `tools/build.mjs` → `public/`), çıktı repoda.
   `pnpm lint` temiz. Yerel `wrangler dev` üzerinde bağlantı, taşma, kontrast, menü ve form testleri geçti.
 
+- **2026-11-02, Faz 3-5:** Push edildi (`714cd19`). Cloudflare GitHub uygulamasına repo yetkisi verildi, Worker
+  `suheylakdeniz-nzfhukuk` repodan oluşturuldu, ilk build yeşil. Faz 6-7 gerekmedi (tek repo, alt alan adı).
+- **2026-11-02, Faz 10:** Dış doğrulama: Cloudflare IP, `/` ve alt sayfalar 200, `/olmayan/` 404, http → https 301,
+  `x-robots-tag: noindex`, sertifika Google Trust Services (2027-01'e kadar), workers.dev 404.
+- **2026-11-02, hub:** Vitrinde "Yakında" piramidi NZF Hukuk oldu, hub dokümanlarına satır eklendi.
+
 ## Şu an
 
-- Faz 3 push: Süheyl'in yerel gözden geçirmesi ve onayı bekleniyor.
+- Hosting için bekleyen adım yok. Site yayında; sıradaki iş tasarım ve metin düzeltmeleri.
 
 ## Gelecek (sırayla)
 
-1. Faz 3: push (`main`).
-2. Faz 0 hatırlatması: Cloudflare GitHub uygulamasına `nzfhukuk` reposu yetkisi (`github.com/settings/installations`).
-3. Faz 4: Worker'ı repodan oluştur. Ad `suheylakdeniz-nzfhukuk`, Build command boş, Deploy `npx wrangler deploy`,
-   Non-production `npx wrangler versions upload`.
-4. Faz 5: Alan adını doğrula. Faz 6 ve 7 gerekmez.
-5. Faz 8: workers.dev anahtarlarını kapat.
-6. Faz 10: dış doğrulama.
-7. Hub: `web/public/tomb/tomb.js` ve `web/public/index.html` içinde "Yakında" yerine NZF Hukuk; `docs/hosting.md`
-   ve `website-playbook.md` tablosu güncellenir. **Site canlıya çıkmadan yapılmaz.**
+1. Süheyl'in düzeltmeleri; her push `main` otomatik yayına girer.
+2. Büro kabul ederse: `docs/avukat-onay-listesi.md`, alan adı geçişi ve yazı paneli ayrıca konuşulur.
 
 ## Doğrulama (bu site için)
 
