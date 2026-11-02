@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  // NZF Hukuk tasarım önerisi, nzfhukuk.suheylakdeniz.com. Static files only, no code runs.
+  "name": "suheylakdeniz-nzfhukuk",
+  "compatibility_date": "2026-10-26",
+  "assets": {
+    "directory": "./public",
+    // /ekip and /ekip/ both serve public/ekip/index.html
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // Cloudflare creates the DNS record and the certificate for this on deploy.
+  "routes": [{ "pattern": "nzfhukuk.suheylakdeniz.com", "custom_domain": true }]
+}
